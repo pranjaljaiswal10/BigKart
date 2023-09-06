@@ -33,11 +33,11 @@ const ProductCard = ({ title, images, brand, price,discountPercentage }) => {
    return (
       <div className="card">
       <img src={images[0]} alt="" />
-  <strong>Brand:{brand}</strong>
-  <small>{title}</small>
+      <big>Brand:<span>{brand}</span></big>
+  <big>{title}</big>
   <div className="price">
-  <span>{price}</span>
-  <span>{}</span>
+  <span>&#8377;{price}</span>
+  <span>&#8377;{}</span>
   <span>{discountPercentage}Off</span>
   </div>
       </div>

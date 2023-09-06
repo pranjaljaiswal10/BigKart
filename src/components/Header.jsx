@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom"
+import { useCart } from "../utils/useCart";
 import Search from "./Search";
 const Header = () => {
+  const {cartState}=useCart();
     return (
         <div className="header">
             <span className="logo">
@@ -17,7 +19,7 @@ const Header = () => {
                     <li><Link to="/contact">Contact</Link></li>
                     <li><Link to="/login">Login</Link></li>
                     <li><Link to="/wishlist">Wishlist</Link></li>
-                    <li><Link to="/cart">Cart</Link></li>
+                    <li><Link to="/cart">Cart{cartState.cart.length}</Link></li>
                 </ul>
             </nav>
         </div>
